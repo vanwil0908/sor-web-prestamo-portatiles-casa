@@ -15,28 +15,53 @@ Debíamos de empezar una bóveda de 0 y crear sus carpetas respectivas, luego te
 ## ⌨️ Comandos y pasos importantes
 
 git --version = Muestra la versión de Git instalada; no instala ni actualiza nada.
+
 git config --global user.name = Muestra el nombre global que Git usará como autor; debe ser el tuyo.
+
 git config --global user.email = Muestra el correo global del autor de los commits; debe ser el tuyo.
+
 ls -l ~/.ssh/id_ed25519 ~/.ssh/id_ed25519.pub = Comprueba que existen los archivos de clave privada y pública; no muestra su contenido.
+
 ssh -T git@github.com = Prueba la autenticación con GitHub. El saludo debe identificar tu usuario; no abre una shell ni sube archivos.
+
 pwd = Muestra la carpeta actual. Contrasta su ruta con la indicada en este paso antes de seguir.
+
 git init = Crea el repositorio local en la carpeta que acabas de comprobar.
+
 git branch -M main = Establece main como nombre de la rama actual.
+
 git status = Muestra la rama main, sin commits todavía, y los archivos iniciales sin seguimiento.
+
 git remote add origin git@github.com:TU-USUARIO/sor-web-prestamo-portatiles-casa.git = Registra origin con la dirección SSH de tu repositorio vacío; todavía no envía archivos.
+
 git remote -v = Muestra las direcciones de lectura y envío de los remotos; origin debe ser el de este proyecto.
-git add . = Prepara todos los archivos no ignorados que hay bajo esta carpeta: en esta primera entrega, gitignore, bitácora y portada.
+
+git add . = Prepara todos los archivos no ignorados que hay bajo esta 
+carpeta: en esta primera entrega, gitignore, bitácora y portada.
+
 git commit -m = Guarda localmente una versión con los cambios preparados y el mensaje indicado.
+
 git push -u origin main =  Sube main por primera vez a origin y configura su seguimiento para las siguientes subidas.
+
 git diff -- = Compara la portada del disco con el índice: antes de prepararla verás la frase anterior con - y la nueva con +. No compara dos archivos diferentes.
+
 git add web/index.html = Prepara únicamente el contenido actual del archivo indicado para el próximo commit; no sube nada.
+
 git push = Envía los commits pendientes al remoto ya configurado. Comprueba que termina sin errores.
-git status --short --untracked-files=all = Muestra el estado abreviado y enumera cada archivo sin seguimiento por su ruta completa, en lugar de agruparlos por carpetas. --short abrevia la salida; --untracked-files=all despliega los nuevos.
+
+git status --short --untracked-files=all = Muestra el estado abreviado y enumera cada archivo sin seguimiento por su ruta completa, en lugar de agruparlos por carpetas. --short abrevia la salida; --untracked-
+files=all despliega los nuevos.
+
 git check-ignore -v web/videos/revision-01.mp4 web/videos/revision-02.mp4 = Indica, para cada ruta, el archivo de reglas, su número de línea y el patrón que la ignora. `-v` pide esos detalles.
+
 git status --short --untracked-files=all = Muestra de nuevo qué está preparado y qué sigue sin preparar. Observa el archivo recién seleccionado.
+
 git diff --cached --stat = Resume los cambios preparados en el índice: nombres y estadísticas. --cached selecciona lo preparado; --stat pide un resumen, no todas las líneas.
+
 git log --oneline = Enumera los commits con código abreviado y mensaje, del más reciente al más antiguo. 
+
 git switch --detach CODIGO_PRIMER_COMMIT = Cambia los archivos seguidos a la versión del commit indicado. --detach permite consultar ese commit sin situarte en una rama.
+
 git switch main = Vuelve a la rama main, recuperando sus archivos seguidos.
 ## 🛠️ Qué he hecho
 
